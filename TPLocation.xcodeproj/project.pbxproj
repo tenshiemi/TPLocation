@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDEC2BA917F601030068A9C4 /* TPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEC2BA817F601030068A9C4 /* TPLocationManager.m */; };
 		BDF9DA1517D9DBC80001F5A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9DA1417D9DBC80001F5A3 /* UIKit.framework */; };
 		BDF9DA1717D9DBC80001F5A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9DA1617D9DBC80001F5A3 /* Foundation.framework */; };
 		BDF9DA1917D9DBC80001F5A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9DA1817D9DBC80001F5A3 /* CoreGraphics.framework */; };
@@ -16,11 +17,12 @@
 		BDF9DA2717D9DBC80001F5A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF9DA2617D9DBC80001F5A3 /* Default.png */; };
 		BDF9DA2917D9DBC80001F5A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF9DA2817D9DBC80001F5A3 /* Default@2x.png */; };
 		BDF9DA2B17D9DBC80001F5A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF9DA2A17D9DBC80001F5A3 /* Default-568h@2x.png */; };
-		BDF9DA3317D9DC6F0001F5A3 /* TPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9DA3217D9DC6F0001F5A3 /* TPLocationManager.m */; };
 		BDF9DA3817D9DDD90001F5A3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9DA3717D9DDD90001F5A3 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDEC2BA717F601030068A9C4 /* TPLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLocationManager.h; sourceTree = SOURCE_ROOT; };
+		BDEC2BA817F601030068A9C4 /* TPLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPLocationManager.m; sourceTree = SOURCE_ROOT; };
 		BDF9DA1117D9DBC80001F5A3 /* TPLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF9DA1417D9DBC80001F5A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDF9DA1617D9DBC80001F5A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,8 +36,6 @@
 		BDF9DA2617D9DBC80001F5A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BDF9DA2817D9DBC80001F5A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BDF9DA2A17D9DBC80001F5A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BDF9DA3117D9DC6F0001F5A3 /* TPLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLocationManager.h; sourceTree = "<group>"; };
-		BDF9DA3217D9DC6F0001F5A3 /* TPLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPLocationManager.m; sourceTree = "<group>"; };
 		BDF9DA3717D9DDD90001F5A3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,8 +87,8 @@
 			children = (
 				BDF9DA2317D9DBC80001F5A3 /* TPAppDelegate.h */,
 				BDF9DA2417D9DBC80001F5A3 /* TPAppDelegate.m */,
-				BDF9DA3117D9DC6F0001F5A3 /* TPLocationManager.h */,
-				BDF9DA3217D9DC6F0001F5A3 /* TPLocationManager.m */,
+				BDEC2BA717F601030068A9C4 /* TPLocationManager.h */,
+				BDEC2BA817F601030068A9C4 /* TPLocationManager.m */,
 				BDF9DA1B17D9DBC80001F5A3 /* Supporting Files */,
 			);
 			path = TPLocation;
@@ -176,7 +176,7 @@
 			files = (
 				BDF9DA2117D9DBC80001F5A3 /* main.m in Sources */,
 				BDF9DA2517D9DBC80001F5A3 /* TPAppDelegate.m in Sources */,
-				BDF9DA3317D9DC6F0001F5A3 /* TPLocationManager.m in Sources */,
+				BDEC2BA917F601030068A9C4 /* TPLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
