@@ -12,7 +12,7 @@ TPLocation provides a completion-block-style asynchronous location interface to 
     :git => "git@github.com:tetherpad/TPLocation.git", 
     :tag => "1.0.0"
   }
-  s.source_files = 'TPLocation.{h,m}'
+  s.source_files = 'TPLocationManager.{h,m}'
   s.requires_arc = true
 
   s.ios.deployment_target = '6.0'
