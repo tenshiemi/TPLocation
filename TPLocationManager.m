@@ -47,16 +47,6 @@ NSString *NSStringFromCLLocationCoordinate2D(CLLocationCoordinate2D coordinate) 
     return sharedManager;
 }
 
-- (CLLocationManager *)locationManager {
-    if (! _locationManager) {
-        _locationManager = [CLLocationManager new];
-        _locationManager.delegate = self;
-        _locationManager.distanceFilter = kLNDistanceFilterForeground;
-        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    }
-    return _locationManager;
-}
-
 - (dispatch_queue_t)handlersQueue {
     if (! _handlersQueue) {
         _handlersQueue = dispatch_queue_create("com.tetherpad.TPLocationManager", DISPATCH_QUEUE_SERIAL);
@@ -114,10 +104,26 @@ NSString *NSStringFromCLLocationCoordinate2D(CLLocationCoordinate2D coordinate) 
     _enabled = enabled;
 }
 
+#pragma mark NSObject
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.locationManager.delegate = nil;
     [self cancelLocationTimeoutTimer];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSAssert([NSThread isMainThread], @"must init on main thread");
+        // Setup the CLLocationManager here so that we ensure it's allocated
+        // on the main thread.
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = kLNDistanceFilterForeground;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    }
+    return self;
 }
 
 #pragma mark Start/Stop
